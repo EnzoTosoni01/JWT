@@ -1,6 +1,5 @@
-module.exports={
-    secret: process.env.AUTH_SECRET ||"trolololo",
-    expires:process.env.AUTH_EXPIRES ||"24h",
-    rounds:process.env.AUTH_ROUNDS||10
-
-}
+module.exports = {
+    secret: process.env.AUTH_SECRET || 'jwt+sequelize',
+    expires: process.env.AUTH_EXPIRES || '1d',
+    salt: process.env.AUTH_SALT || '10',
+  };
