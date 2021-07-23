@@ -11,6 +11,7 @@ services:
       - backend
     ports:
       - '3000:3000'
+      # variables de entorno de node-server
     environment:
       - DB_HOST=mysql-database
       - DB_USERNAME=user
@@ -30,8 +31,9 @@ services:
   mysql-database:
     container_name: mysql-database
     image: mysql
-    # En Unix/Linux las minúsculas y mayúsculas se distinguen (users != Users)
+    # para la distinción de mayusculas y mínusculas en Linux
     command: --lower_case_table_names=1
+    # variables de entorno de mysql
     environment:
       - MYSQL_USER=user
       - MYSQL_PASSWORD=pass
