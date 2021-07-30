@@ -1,0 +1,30 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions": [
+        {
+            "name": "node-server",
+            "image": "enzo/node-server",
+            "memory": 128,
+            "portMappings": [
+                {
+                    "hostPort": 3000,
+                    "containerPort": 3000
+                }
+            ],
+            "links": [
+                "frontend"
+            ]
+        },
+        {
+            "name": "mysql-database",
+            "image": "mysql",
+            "memory": 128,
+            "portMappings": [
+                {
+                    "hostPort": 3306,
+                    "containerPort": 3306
+                }
+            ]
+        }
+    ]
+}

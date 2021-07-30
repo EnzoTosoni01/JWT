@@ -6,7 +6,7 @@ services:
   node-server:
     container_name: node-server
     build: .
-    image: enzo/node-server
+    image: enzotoso/node-server
     networks:
       - backend
     ports:
